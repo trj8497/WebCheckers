@@ -1,0 +1,137 @@
+/**
+* Author: Yu Liang
+**/
+
+@import "theme.css"
+button{
+  border: none;
+  outline: none;
+}
+
+div.large{
+    background: var(--bg-large);
+    border: 1px solid #6ECCFF;
+    width: 710px;
+    height: 630px;
+    margin: 30px auto;
+}
+  
+.circle{
+   text-align: center;
+   text-decoration: none;
+   color:#fff;
+   font-size: 45px;
+   font-weight: bold;
+   display: block;
+   position: relative;
+   top:31%;
+   padding: 0;
+   z-index: 98;
+   margin: 0 auto;
+   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+   background-image: linear-gradient(135deg,#fcc6b3 0%, #ff6d6d 100%);
+   border-radius: 50%;
+   height: 150px;
+   width: 150px;
+   background-color: var(--circle);
+   transition: 0.2s;
+   z-index:0;
+}
+.circle:active{
+    transform: scale(0.60);
+    box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.32);
+}
+.circle:hover{
+  cursor: pointer;
+  box-shadow: 0 8px 15px 0 rgba(0,0,0,0.3);
+}
+
+.sub-circle{
+  z-index: 0;
+  background-color: #FFF;
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: 0.3s;
+  transform: scale(0.5);
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.3);
+  background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
+  outline:none;
+}
+.sub-circle label{
+  font-size:65px;
+  text-align:center;
+  padding-top:36px;
+  display: block;
+  color: white;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+  transition: 200ms;
+}
+label.mid{
+   font-size:36px;
+   padding-top:37px;
+}
+
+label.large{
+   font-size:27px;
+   padding-top:36px;
+}
+
+.sub-circle:hover{
+    cursor: pointer;
+    background-color: var(--sub-light);
+    box-shadow: 0 8px 15px 0 rgba(0,0,0,0.3);
+}
+
+.subs{
+  right:60px;
+  top: 3%;
+  width: 50px;
+  height: 80px;
+  text-align: center;
+  z-index: 0;
+  margin: 0 auto;
+  position: relative;
+ }
+
+.hidden-sub-trigger{
+  display: none;
+}
+
+.hidden-sub-trigger:checked ~label{
+    background-color: var(--circle);
+}
+
+.hidden-trigger{
+  display:none;
+}
+.hidden-trigger:checked ~ .circle{
+ transform: scale(0.75);
+ cursor: pointer;
+ text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+ background-image: linear-gradient(#fed6e3 0%, #ffaaaa 100%);
+}
+
+.hidden-trigger:checked ~ .subs button:nth-of-type(1){
+    transform: translate(0px, var(--neg)) scale(1);
+    opacity: 1;
+    transition: 0.2s;
+}
+.hidden-trigger:checked ~ .subs button:nth-of-type(2){
+    transform: translate(var(--trans),var(--trans)) scale(1);
+    opacity: 1;
+    transition: 0.5s;
+}
+.hidden-trigger:checked ~ .subs button:nth-of-type(3){
+    transform: translate(var(--neg), var(--trans)) scale(1);
+    opacity: 1;
+    transition: 0.7s;
+}

@@ -1,0 +1,134 @@
+/**
+* @author:  Yu Liang
+**/
+
+/**
+*  the decoration of the rule button
+*/
+.rule {
+  font-size: 15px;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background: var(--rule);
+  border-radius: 50%;
+  display: inline-block;
+  width: 27px;
+  height: 25px;
+  position: relative;
+  float: right;
+  margin-top:-11.95px;
+  bottom:-5px;
+  border: 3px solid #e6ebed;
+  overflow: hidden;
+  padding-top: 12px;
+  padding-right: 17px;
+  padding-bottom: 5px;
+  padding-left: 4.5px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+/**
+*  when the mouse move on the button
+*/
+.rule:hover{
+  border: 2px #3874c9;
+  background: #0a4b63;
+  color: white;
+}
+
+/**
+*  the decoration in between the popup box and webpage
+*/
+.back {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/**
+* to show the popup
+*/
+.back:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/**
+* the rule's popup box
+*/
+.box {
+  margin: 70px auto;
+  padding: 20px;
+  background: var(--btn-rule);
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  z-index:1;
+}
+
+/**
+* for the header in the popup box
+*/
+.box h3 {
+  margin-top: 0;
+  color: black;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+/**
+* for the close button on the popup box
+*/
+.box .close {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  transition: all 200ms;
+  font-size: 35px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+/**
+* for the color when mouse move to the close button on the box
+*/
+.box .close:hover {
+  color: #ad1813;
+}
+
+/**
+* for the text i the popup box
+*/
+.box .file{
+  color: black;
+  font-family: 'Trebuchet MS', sans-serif;
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
+}
+
+/**
+* for normal paragraph
+*/
+p.paraStyle{
+  line-height: 1.7;
+}
+
+/**
+* for important paragraph
+*/
+p.main{
+  line-height: 1.7;
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}

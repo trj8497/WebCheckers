@@ -1,0 +1,101 @@
+/**
+* @author: Yu Liang
+**/
+@import "style.css";
+html {
+    display: grid;
+    --bg: #CAECFF;
+    --bg-h1: #6ECCFF;
+    --rule:#5fbed8;
+    --bg-nav: #DEE9FF;
+    --bg-page: white;
+    --color-text: #444;
+    --circle: #f9a9ae;
+    --sub-circle: #f5003d;
+    --trans: 160px;
+    --neg: -160px;
+    --sub-light:#f25959;
+    --btn: #CAECFF;
+    --btn-rule: #CAECFF;
+    --h2:#10afff;
+    --gbtn:#bfdcff;
+    --player: #000000;
+    --switch:#b5bed1;
+    --text:white;
+    --text-bd:#BFE6FF;
+}
+
+html[data-theme='dark'] {
+    --bg: #333333;
+    --bg-h1: #1a3644;
+    --bg-nav: #434343;
+    --bg-page: #9b9b9b;
+    --btn:#b6c9d6;
+    --btn-rule:#78a9c9;
+    --rule:#2f6170;
+    --color-text: #B5B5B5;
+    --sub-circle:#cc1e1e;
+    --circle:#7a84bc;
+    --sub-light:#c14b4b;
+    --h2:#1057FF;
+    --gbtn:#9ecaff;
+    --player: #f4faff;
+    --switch:#9b9b9b;
+    --text: #d6d4d4;
+    --text-bd:#434343;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+/**
+* the toggle
+*/
+label[type='switch'] {
+	cursor: pointer;
+	width: 45px;
+	height: 20px;
+	background: var(--switch);
+	float: right;
+	border-radius: 100px;
+	position: relative;
+}
+
+/**
+*circle in toggle
+*/
+label[type='switch']:after {
+	content: '';
+	position: absolute;
+	top: 2.5px;
+	left: 3px;
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: var(--switch);
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}

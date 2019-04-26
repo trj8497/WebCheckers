@@ -1,0 +1,172 @@
+/**
+* Contributor: Yu Liang
+**/
+body {
+  background: var(--bg);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+}
+
+a {
+  color: #2677FF;
+}
+
+a:hover {
+  color: #333;
+}
+
+a[disabled] {
+  color: gray;
+  cursor: default;
+}
+
+p.list{
+  text-align:center;
+  font-size:25px;
+  color:var(--player);
+}
+
+button[type="list"]{
+    background-color:var(--gbtn);
+    float: center;
+    font-size:18px;
+    border-radius:10x;
+    border-style:groove;
+    border-width:3px;
+    border-color:#99bce8;
+    outline:none;
+}
+
+button[type="list"]:hover{
+    cursor:pointer;
+    box-shadow: 0 8px 15px 0 rgba(0,0,0,0.3);
+}
+
+form#signout {
+  display: inline;
+}
+
+input[type="text"],
+input[type="password"] {
+  background: var(--text);
+  border: 1px solid var(--text-bd);
+  padding: 2px;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  color: #1057FF;
+}
+
+input[type="submit"] {
+  background: #3a6de8;
+  border: 1px solid #073BFF;
+  padding: 1px 3px;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  color: white;
+}
+
+button[type="disable"] {
+    color: gray;
+    cursor: default;
+}
+
+div.page {
+  background: var(--bg-page);
+  border: 6px solid var(--bg-h1);
+  width: 710px;
+  margin: 30px auto;
+  border-radius:25px;
+  border-style:outset;
+}
+
+div.page h1 {
+  background: var(--bg-h1);
+  margin: 0;
+  padding: 10px 14px;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 0 0 3px #2477FF;
+  font-weight: normal;
+  border-radius:25px 25px 0 0;
+
+}
+
+div.page div.navigation {
+  background: var(--bg-nav);
+  padding: 5px 18px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #eee;
+  color: #888;
+  font-size: 13.5px;
+  letter-spacing: 0.5px;
+}
+
+div.page div.navigation a {
+  color: var(--color-text);
+  font-weight: bold;
+}
+
+div.page h2 {
+  font-size:30px;
+  text-align:center;
+  margin: 0.5em 0 0.25em 0;
+  color: var(--h2);
+  text-shadow: 0 1px 2px #ccc;
+}
+
+div.page div.body {
+  padding: 10px;
+}
+
+div.page div.footer {
+  background: #eee;
+  color: #888;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+/**
+ * The styling of a Message with an ERROR type.
+ */
+div.ERROR {
+  margin: 10px 0;
+  background: #FAE4E4;
+  border: 1px solid #DD6F6F;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  padding: 4px;
+  font-size: 13px;
+}
+
+/**
+ * The styling of a Message with an INFO type.
+ */
+div.INFO {
+  margin: 10px 0;
+  background: #FAFFE4;
+  border: 1px solid green;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  padding: 4px;
+  font-size: 13px;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+button.player {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+}
+button.game {
+  background-color: #fff1f1;
+  width: 100px;
+  margin: 10px;
+}
